@@ -1,4 +1,6 @@
 import React from 'react';
+import { Outlet, Link } from 'react-router-dom';
+
 import './Tabs.css';
 import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import PlaylistAddCheckOutlinedIcon from '@mui/icons-material/PlaylistAddCheckOutlined';
@@ -6,24 +8,31 @@ import TextSnippetOutlinedIcon from '@mui/icons-material/TextSnippetOutlined';
 
 function Tabs() {
   return (
+
+    
     <div className="tabs">
-      <div className="tab bookmark-tab">
+      <Link to="/bookmarks" className="tab bookmark-tab">
         <div className="tab-title">
           <BookmarksOutlinedIcon />
         </div>
-      </div>
-	 <div className="tab todo-tab">
+        {/* <Outlet /> */}
+      </Link>
+      
+
+
+      <Link to="/Todos" className="tab todo-tab">
         <div className="tab-title">
           <PlaylistAddCheckOutlinedIcon />
         </div>
-      </div>
+        {/* <Outlet /> */}
+      </Link>
 
-	 <div className="tab note-tab">
+      
+      <Link to="/Notes" className="tab note-tab">
         <div className="tab-title">
           <TextSnippetOutlinedIcon />
         </div>
-      </div>
-
+      </Link>
     </div>
   );
 }

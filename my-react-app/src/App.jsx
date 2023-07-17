@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
+
 import './App.css';
 import Tabs from './tabs/Tabs';
+import Bookmarks from './bookmarks/Bookmarks';
 
 function App() {
   const [currentTime, setCurrentTime] = useState('');
@@ -33,6 +36,7 @@ function App() {
       </div>
 
       <div className="content-section"></div>
+      <Outlet />
 
       <div className="bottom-section">
         <Tabs />
