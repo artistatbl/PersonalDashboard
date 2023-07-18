@@ -1,15 +1,25 @@
-import React from  'react';
-import { Outlet } from "react-router-dom";
+import React from 'react';
+import './Bookmarks.css' ;
+import BookmarkTiles from '../booktitles/Bookmarktiles';
 
 function Bookmarks() {
 	return (
-		<div>
-		<h1>Hello, React!</h1>
-		<p>This is a basic React component.</p>
-		<Outlet />
-	   </div>
-	);
+	<div className='bookmarks-wrapper'> 
 	
+	<div className='container'> 
+	
+	 <div className='bookmark-container'>
+
+	 <BookmarkTiles />
+	
+	 </div>  
+	 
+	 </div>
+	 
+	 </div>
+	 
+	 );
+
 }
 
 export default Bookmarks;

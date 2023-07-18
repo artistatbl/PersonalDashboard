@@ -1,73 +1,99 @@
 .tabs {
 	display: flex;
 	padding: 15px;
-
 	gap: 14px;
 	background-color: rgba(255, 255, 255, 0.25);
 	backdrop-filter: blur(10px);
-	border-radius: 12px;
-
-
+	border-radius: 10px;
 	margin: auto;
-	/* margin: 12px; */
 	margin-top: 50px;
-
-}
-
-.tab {
+   }
+   
+   .tab {
 	position: relative;
 	z-index: -1;
-	/*  */
-}
-
-.tab-title {
+   }
+   
+   .tab-title {
 	padding: 18px;
-	/* background: rgba(0, 0, 0, 0.1); */
-	/* background: linear-gradient(45deg, #f8b5a5, #e2d2fd); */
 	cursor: pointer;
 	border-radius: 10px;
 	display: flex;
-}
+	transition: all 0.5s cubic-bezier(0.100, 0.705, 0.25, 1.500);
+   }
 
-.tab-title::before {
+   .tab.selected .tab-title{
+	   transform: translateY(-50%);
+	   border-radius: 50%;
+   }
+   
+   .tab-title::before {
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-
-	/* background: linear-gradient(45deg, #f8b5a5, #e2d2fd); */
 	border-radius: 10px;
 	opacity: 0.8;
 	z-index: -1;
-	transition:  all 0.4s;
+	transition: all 0.4s;
+   }
+   
+   .tab.selected .tab-title::before {
+	transform: scale(1.1);
+	border-radius: 75%;
+	box-shadow: 0px 8px 17px rgba(0,0,0, 0.4);
+	transition-delay: 0.1s;
 
-
-
-
-}
-
-.bookmark-tab .tab-title::before {
+	opacity: 2;
+	
+   }
+   
+   
+   .bookmark-tab .tab-title::before {
 	background: linear-gradient(45deg, #f8b5a5, #e2d2fd);
-
-
-}
-
-.note-tab .tab-title::before {
+   }
+   
+   .note-tab .tab-title::before {
 	background: linear-gradient(45deg, #d88975, #a179e5);
-
-
-}
-
-.todo-tab .tab-title::before {
+   }
+   
+   .todo-tab .tab-title::before {
 	background: linear-gradient(45deg, #dbf490, #8860cf);
-
-
-}
-
-
-.tab-title:hover::before{
+   }
+   
+   .tab-title:hover::before {
 	opacity: 1;
 	transform: scale(1.1);
-}
+   }
+   
+
+
+   .tab::after{
+	   content: '';
+	   position: absolute;
+	   height: 3px;
+	   width: 60%;
+	   left: 0;
+	   right: 0;
+	   margin: auto;
+	   background-color: rgba(255,255,255, 0.7);
+	   border-radius: 2px;
+	   transition: all 0.3s;
+
+	   
+	   bottom: -15px;
+	   opacity: 0;
+	   transform: scale(0);
+   }
+   .tab.selected::after{
+	   opacity: 1;
+	   transform: scale(1);
+	   transition-delay: 0.3s;
+   }
+
+
+   .tab.selected {
+	   outline: none;
+   }
