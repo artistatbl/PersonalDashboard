@@ -4,8 +4,10 @@ import './Bookmarktiles.css';
 function BookmarkTiles() {
   return (
     <div>
+	<div className='bookmark-title-container'>
       <div className='bookmark-title'>
         <img src='http://wikipedia.org/favicon.ico' alt='' />
+	   <p className='bookmark-text'>Wikipedia</p>
       </div>
 
       <div className='bookmark-title'>
@@ -19,6 +21,8 @@ function BookmarkTiles() {
       <div className='bookmark-title'>
         <img src='http://instagram.com/favicon.ico' alt='' />
       </div>
+	 
+    </div>
     </div>
   );
 }

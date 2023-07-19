@@ -1,13 +1,50 @@
 .bookmark-title{
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background: rgb(0, 0, 0, 0.4);
 	border-radius: 8px;
-	width: 100px;
-	height: 100px;
+	padding: 5px;
+	width: 105px;
+	height: 105px;
+	cursor: pointer;
+	transition: all 0.4s;
+
+	
+}
+.bookmark-title:hover{
+	background: rgba(254, 254, 254, 0.2);
+	/* transition: all 0.4s; */
+	backdrop-filter: blur(2px);
+	
+}
+.bookmark-title:active{
+	background: rgba(254, 254, 254, 0.5);
+	transform: translateY(5px);
+	transition-duration: 0s;
+}
+.bookmark-title-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	/* overflow-y: auto;
+	min-height: 0; */
+
+	gap: 20px;
 }
 
 .bookmark-title img{
 	max-width: 30px;
+	
+}
+
+.bookmark-text{
+	color: rgba(255,255,255, 0.8);
+	margin: 5px;
+	font-size: 15px;
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

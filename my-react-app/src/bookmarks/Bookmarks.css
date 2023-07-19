@@ -1,11 +1,6 @@
 .bookmark-wrapper{
 	height: 100%;
-	
-}
-
-.bookmark-container{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	gap: 20px;
+	background: wheat;
+	overflow-y: auto;
+	min-height: 0;
 }
