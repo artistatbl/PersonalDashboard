@@ -13,8 +13,7 @@ function Bookmarks() {
 	 <BookmarkTiles />
 	 <br />
 	 <BookmarkTiles />
-	 <br />
-	 <BookmarkTiles />
+	<br/>
 	
 
 	 
